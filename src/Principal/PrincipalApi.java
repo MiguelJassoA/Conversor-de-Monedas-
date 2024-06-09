@@ -9,20 +9,21 @@ import java.net.http.HttpResponse;
 
 public class PrincipalApi {
 
-    Moneda pedirdatos(String pais){
+    public Moneda pedirdatos(String pais, String paisconversion, double cantidad){
         try {
 
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("https://v6.exchangerate-api.com/v6/f3a8f5a9b8e6742e3ba492fe/latest/"+pais))
+                    .uri(URI.create("https://v6.exchangerate-api.com/v6/f3a8f5a9b8e6742e3ba492fe/pair/"+pais+"/"+paisconversion+"/"+cantidad))
                     .build();
 
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
             return new Gson().fromJson(response.body(), Moneda.class);
         } catch (IOException | InterruptedException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("No encontre esta moneda.");
         }
+
 
     }
 }
