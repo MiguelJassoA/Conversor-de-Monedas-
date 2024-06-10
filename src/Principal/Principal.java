@@ -1,14 +1,11 @@
 package Principal;
-import Metodos.Moneda;
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.IOException;
 
 public class Principal {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Metodos.Menu menu = new Metodos.Menu();
         menu.menu();
+
 
 
 

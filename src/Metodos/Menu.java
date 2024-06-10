@@ -1,13 +1,17 @@
 package Metodos;
 import Principal.PrincipalApi;
+
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
-    public void menu() {
+    public void menu() throws IOException {
         Moneda moneda;
         boolean salida;
+        FileWriter escritura = new FileWriter("archivo.txt");
 
         do {
             PrincipalApi principalApi = new PrincipalApi();
@@ -45,6 +49,7 @@ public class Menu {
                         moneda = principalApi.pedirdatos(paisunoTresLetras, paisdosTresLetras, cuantoDinero);
                         System.out.println("La tasa de conversión actual es de: " + moneda.conversion_rate());
                         System.out.println(cuantoDinero + "[" + paisunoTresLetras + "]" + " son " + moneda.conversion_result() + "[" + paisdosTresLetras + "]");
+                        escritura.write(moneda.toString());
                         break;
                     case 2:
                         paisuno = "Dírham AED";
@@ -99,6 +104,7 @@ public class Menu {
                         System.out.println(cuantoDinero + "[" + paisunoTresLetras + "]" + " son " + moneda.conversion_result() + "[" + paisdosTresLetras + "]");
                         break;
                     case 6:
+                        escritura.close();
                         salida = true;
 
                         break;
