@@ -63,6 +63,7 @@ public class Menu {
                         moneda = principalApi.pedirdatos(paisunoTresLetras, paisdosTresLetras, cuantoDinero);
                         System.out.println("La tasa de conversión actual es de: " + moneda.conversion_rate());
                         System.out.println(cuantoDinero + "[" + paisunoTresLetras + "]" + " son " + moneda.conversion_result() + "[" + paisdosTresLetras + "]");
+                        escritura.write(moneda.toString());
                         break;
                     case 3:
                         paisuno = "Afgani AFN";
@@ -76,6 +77,7 @@ public class Menu {
                         moneda = principalApi.pedirdatos(paisunoTresLetras, paisdosTresLetras, cuantoDinero);
                         System.out.println("La tasa de conversión actual es de: " + moneda.conversion_rate());
                         System.out.println(cuantoDinero + "[" + paisunoTresLetras + "]" + " son " + moneda.conversion_result() + "[" + paisdosTresLetras + "]");
+                        escritura.write(moneda.toString());
                         break;
                     case 4:
                         paisuno = "Lek albanés ALL";
@@ -89,6 +91,7 @@ public class Menu {
                         moneda = principalApi.pedirdatos(paisunoTresLetras, paisdosTresLetras, cuantoDinero);
                         System.out.println("La tasa de conversión actual es de: " + moneda.conversion_rate());
                         System.out.println(cuantoDinero + "[" + paisunoTresLetras + "]" + " son " + moneda.conversion_result() + "[" + paisdosTresLetras + "]");
+                        escritura.write(moneda.toString());
                         break;
                     case 5:
                         paisuno = "Pesos Mexicanos MXN";
@@ -102,6 +105,7 @@ public class Menu {
                         moneda = principalApi.pedirdatos(paisunoTresLetras, paisdosTresLetras, cuantoDinero);
                         System.out.println("La tasa de conversión actual es de: " + moneda.conversion_rate());
                         System.out.println(cuantoDinero + "[" + paisunoTresLetras + "]" + " son " + moneda.conversion_result() + "[" + paisdosTresLetras + "]");
+                        escritura.write(moneda.toString());
                         break;
                     case 6:
                         escritura.close();
