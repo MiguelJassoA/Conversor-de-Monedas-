@@ -14,6 +14,7 @@ Control de excepciones sobre el formato de los datos ingresados.
 Creacion de un archivo .txt donde se guardará el registro de sus consultas.
 Quien desee acceder a la aplicación, puede descargar directamente el repositorio desde Github.</p>
 
+[![Alt text](https://img.youtube.com/vi/eLurUzeavdU/0.jpg)](https://www.youtube.com/watch?v=eLurUzeavdU)
 
 <h2>Consideraciones</h2>
 <p>Un agregado a las opciones de conversion es la creacion de un archivo .txt que guarda la conversion realizada, la tasa de cambio utilizada, la fecha y hora.
